@@ -492,9 +492,13 @@
                         <label for="addOns">Add Extra Services</label>
                         <select id="addOns" onchange="calculatePrice()">
                             <option value="">No Extras</option>
-                            <option value="window">+ Window Cleaning</option>
+
+                            <option value="window">+ Balcony Cleaning</option>
                             <option value="fan">+ Exhaust Fan Cleaning</option>
-                            <option value="both">+ Window + Exhaust Fan</option>
+                            <option value="both">+ Fan Cleaning</option>
+                            <!-- <option value="window">+ Window Cleaning</option> -->
+                            <!-- <option value="fan">+ Exhaust Fan Cleaning</option> -->
+                            <!-- <option value="both">+ Window + Exhaust Fan</option> -->
                         </select>
                     </div>
                 </div>
@@ -562,38 +566,38 @@
             </div>
 
             <!-- Bathroom + Kitchen Combo -->
-            <div class="combo-section">
-                <h2 class="section-title" style="margin-bottom: 10px;">💎 Bathroom + Kitchen Combos</h2>
-                <div class="combo-grid">
-                    <div class="combo-card">
-                        <div class="combo-title">Combo 1+1</div>
-                        <div class="combo-desc">1 Bathroom + 1 Kitchen Standard Cleaning</div>
-                        <div class="combo-price">₹ 1,099</div>
-                        <span class="combo-type">Save ₹ 149</span>
-                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 399 + ₹ 749 = ₹ 1,248</p>
-                    </div>
-
-                    <div class="combo-card">
-                        <div class="combo-title">Combo 1+2</div>
-                        <div class="combo-desc">1 Bathroom + 1 Kitchen Move-In Cleaning</div>
-                        <div class="combo-price">₹ 1,699</div>
-                        <span class="combo-type">Save ₹ 269</span>
-                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 499 + ₹ 1,399 = ₹ 1,968</p>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="combo-section"> -->
+            <!--     <h2 class="section-title" style="margin-bottom: 10px;">💎 Bathroom + Kitchen Combos</h2> -->
+            <!--     <div class="combo-grid"> -->
+            <!--         <div class="combo-card"> -->
+            <!--             <div class="combo-title">Combo 1+1</div> -->
+            <!--             <div class="combo-desc">1 Bathroom + 1 Kitchen Standard Cleaning</div> -->
+            <!--             <div class="combo-price">₹ 1,099</div> -->
+            <!--             <span class="combo-type">Save ₹ 149</span> -->
+            <!--             <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 399 + ₹ 749 = ₹ 1,248</p> -->
+            <!--         </div> -->
+            <!---->
+            <!--         <div class="combo-card"> -->
+            <!--             <div class="combo-title">Combo 1+2</div> -->
+            <!--             <div class="combo-desc">1 Bathroom + 1 Kitchen Move-In Cleaning</div> -->
+            <!--             <div class="combo-price">₹ 1,699</div> -->
+            <!--             <span class="combo-type">Save ₹ 269</span> -->
+            <!--             <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 499 + ₹ 1,399 = ₹ 1,968</p> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </div> -->
 
             <!-- Add-ons for Bathroom -->
             <div class="addons-section">
                 <h2 class="section-title" style="margin-bottom: 10px;">➕ Add-on Services</h2>
                 <div class="addons-grid">
-                    <div class="addon-item">
-                        <div>
-                            <div class="addon-name">Window Cleaning</div>
-                            <div class="addon-desc">Bathroom window inside & out</div>
-                        </div>
-                        <div class="addon-price">₹ 199</div>
-                    </div>
+                    <!-- <div class="addon-item"> -->
+                    <!--     <div> -->
+                    <!--         <div class="addon-name">Window Cleaning</div> -->
+                    <!--         <div class="addon-desc">Bathroom window inside & out</div> -->
+                    <!--     </div> -->
+                    <!--     <div class="addon-price">₹ 199</div> -->
+                    <!-- </div> -->
 
                     <div class="addon-item">
                         <div>
@@ -605,27 +609,35 @@
 
                     <div class="addon-item">
                         <div>
-                            <div class="addon-name">Extra Bathroom</div>
-                            <div class="addon-desc">Additional bathroom standard cleaning</div>
-                        </div>
-                        <div class="addon-price">₹ 399</div>
-                    </div>
-
-                    <div class="addon-item">
-                        <div>
-                            <div class="addon-name">Mirror Deep Clean</div>
-                            <div class="addon-desc">Streak-free mirror polishing</div>
+                            <div class="addon-name"> Fan Cleaning</div>
+                            <div class="addon-desc">Deep cleaning of exhaust fan</div>
                         </div>
                         <div class="addon-price">₹ 49</div>
                     </div>
 
                     <div class="addon-item">
                         <div>
-                            <div class="addon-name">Fixture Polishing</div>
-                            <div class="addon-desc">Tap and showerhead polishing</div>
+                            <div class="addon-name">Extra Balcony</div>
+                            <div class="addon-desc">Additional bathroom standard cleaning</div>
                         </div>
-                        <div class="addon-price">₹ 35</div>
+                        <div class="addon-price">₹ 399</div>
                     </div>
+
+                    <!-- <div class="addon-item"> -->
+                    <!--     <div> -->
+                    <!--         <div class="addon-name">Mirror Deep Clean</div> -->
+                    <!--         <div class="addon-desc">Streak-free mirror polishing</div> -->
+                    <!--     </div> -->
+                    <!--     <div class="addon-price">₹ 49</div> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="addon-item"> -->
+                    <!--     <div> -->
+                    <!--         <div class="addon-name">Fixture Polishing</div> -->
+                    <!--         <div class="addon-desc">Tap and showerhead polishing</div> -->
+                    <!--     </div> -->
+                    <!--     <div class="addon-price">₹ 35</div> -->
+                    <!-- </div> -->
                 </div>
             </div>
 
@@ -679,7 +691,7 @@
                                 </tr>
                                 <tr><td>Occupied</td><td class="price-tag">₹ 1,099</td></tr>
                                 <tr><td>Unoccupied</td><td class="price-tag">₹ 849</td></tr>
-                                <tr><td>Move-In</td><td class="price-tag">₹ 1,249</td></tr>
+                                <!-- <tr><td>Move-In</td><td class="price-tag">₹ 1,249</td></tr> -->
                             </table>
                         </div>
                     </div>
