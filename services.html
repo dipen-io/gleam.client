@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - GleamUp Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #f0f0f0;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .service-icon {
+            font-size: 3em;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .service-header {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .full-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .bathroom {
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+        }
+
+        .kitchen {
+            background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+        }
+
+        .service-body {
+            padding: 25px;
+        }
+
+        .service-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .service-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .price-range {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .view-details {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .view-details:hover {
+            transform: scale(1.05);
+        }
+
+        /* Other Services Section */
+        .other-services {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .mini-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .mini-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .mini-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .mini-price {
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-top: 40px;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .contact-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <base target="_blank">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Our Cleaning Services</h1>
+            <p>Professional cleaning solutions for every corner of your home</p>
+        </div>
+
+        <div class="content">
+            <!-- Main Services -->
+            <div class="services-grid">
+                <!-- Full Home Cleaning -->
+                <a href="full-home-cleaning.html" class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <div class="service-header full-home">Full Home Cleaning</div>
+                    <div class="service-body">
+                        <h3 class="service-title">Complete Home Cleaning</h3>
+                        <p class="service-desc">Comprehensive cleaning packages for your entire home. Choose from
+                            Classic, Premium, or Platinum tiers based on your needs.</p>
+                        <div class="price-range">₹ 2,849 - ₹ 6,949</div>
+                        <ul class="features">
+                            <li>1BHK to 5BHK options</li>
+                            <li>Furnished & Unfurnished</li>
+                            <li>3 Service Tiers</li>
+                            <li>All rooms covered</li>
+                        </ul>
+                        <span class="view-details">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Bathroom Cleaning -->
+                <a href="bathroom-cleaning.html" class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <div class="service-header bathroom">Bathroom Cleaning</div>
+                    <div class="service-body">
+                        <h3 class="service-title">Bathroom Deep Clean</h3>
+                        <p class="service-desc">Specialized bathroom cleaning services from standard maintenance to deep
+                            move-in cleaning with sanitization.</p>
+                        <div class="price-range">₹ 399 - ₹ 499</div>
+                        <ul class="features">
+                            <li>Standard & Move-In options</li>
+                            <li>Tile & grout cleaning</li>
+                            <li>Fixture polishing</li>
+                            <li>Disinfection included</li>
+                        </ul>
+                        <span class="view-details">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Kitchen Cleaning -->
+                <a href="kitchen-cleaning.html" class="service-card">
+                    <div class="service-icon">🍳</div>
+                    <div class="service-header kitchen">Kitchen Cleaning</div>
+                    <div class="service-body">
+                        <h3 class="service-title">Kitchen Deep Clean</h3>
+                        <p class="service-desc">Professional kitchen cleaning for occupied, unoccupied, or move-in
+                            situations. Includes appliance cleaning options.</p>
+                        <div class="price-range">₹ 849 - ₹ 1,399</div>
+                        <ul class="features">
+                            <li>4 Service Types</li>
+                            <li>Appliance add-ons</li>
+                            <li>Degreasing & sanitization</li>
+                            <li>Cabinet cleaning</li>
+                        </ul>
+                        <span class="view-details">View Details →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Other Services -->
+            <div class="other-services">
+                <h2 class="section-title">Additional Services</h2>
+                <div class="mini-grid">
+                    <div class="mini-card">
+                        <div class="mini-icon">🛋️</div>
+                        <div class="mini-name">Sofa Cleaning</div>
+                        <div class="mini-price">₹ 399 - ₹ 699</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">🛏️</div>
+                        <div class="mini-name">Mattress Cleaning</div>
+                        <div class="mini-price">₹ 379</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">❄️</div>
+                        <div class="mini-name">Refrigerator</div>
+                        <div class="mini-price">₹ 249 - ₹ 349</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">🔥</div>
+                        <div class="mini-name">Chimney Cleaning</div>
+                        <div class="mini-price">₹ 299</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">📟</div>
+                        <div class="mini-name">Microwave</div>
+                        <div class="mini-price">₹ 149</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">🪟</div>
+                        <div class="mini-name">Window Cleaning</div>
+                        <div class="mini-price">₹ 199</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">🌅</div>
+                        <div class="mini-name">Balcony Cleaning</div>
+                        <div class="mini-price">₹ 349</div>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="mini-icon">🚪</div>
+                        <div class="mini-name">Store/Utility</div>
+                        <div class="mini-price">₹ 299</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combo Deals -->
+            <div class="other-services" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+                <h2 class="section-title">💎 Special Combo Deals</h2>
+                <div class="mini-grid">
+                    <div class="mini-card" style="border: 2px solid #27ae60;">
+                        <div class="mini-icon">🎯</div>
+                        <div class="mini-name">Combo 1+1</div>
+                        <div class="mini-price" style="color: #27ae60;">₹ 1,099</div>
+                        <p style="font-size: 0.8em; color: #666; margin-top: 5px;">Bathroom + Kitchen Standard</p>
+                    </div>
+
+                    <div class="mini-card" style="border: 2px solid #27ae60;">
+                        <div class="mini-icon">⭐</div>
+                        <div class="mini-name">Combo 1+2</div>
+                        <div class="mini-price" style="color: #27ae60;">₹ 1,699</div>
+                        <p style="font-size: 0.8em; color: #666; margin-top: 5px;">Bathroom + Kitchen Move-In</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="contact-section">
+                <h3>Need Help Choosing?</h3>
+                <p>Contact us for a free consultation and customized cleaning plan tailored to your needs.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
