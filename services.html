@@ -244,7 +244,7 @@
             }
         }
     </style>
-    <base target="_blank">
+    <!-- <base target="_blank"> -->
 </head>
 
 <body>
@@ -257,13 +257,26 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/full-home-cleaning.html">Full Home Cleaning</a></li>
+                            <li><a href="services/bathroom-cleaning.html">Bathroom Cleaning</a></li>
+                            <li><a href="services/kitchen-cleaning.html">Kitchen Cleaning</a></li>
+                            <li><a href="services/sofa-mattress-cleaning.html">Sofa & Mattress Cleaning</a></li>
+                            <li><a href="services/fridge-cleaning.html">Fridge Cleaning</a></li>
+                            <li><a href="services/windows-doors-fan-cleaning.html">Windows/Doors/Fan Cleaning</a></li>
+                        </ul>
+                    </li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
     <div class="containers">
@@ -415,5 +428,6 @@
         </div>
     </div>
 </body>
+<script src="js/script.js"></script>
 
 </html>
