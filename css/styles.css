@@ -208,26 +208,34 @@ img {
     color: var(--primary-color);
 }
 
+.main-nav li.dropdown {
+    display: inline-block;
+    /* Ensures it acts as a stable anchor */
+}
+
 .dropdown-menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    background-color: white !important;
-    box-shadow: var(--shadow) !important;
-    width: 220px !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(10px) !important;
-    transition: var(--transition) !important;
-    z-index: 1000 !important;
-    display: block !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    list-style: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: var(--shadow);
+    width: 250px;
+    padding: 10px 0;
+    margin: 0;
+
+    /* These lines fix the horizontal/row issue */
+    display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
     align-items: stretch !important;
-    box-sizing: border-box !important;
+
+    /* Animation & Visibility */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -239,32 +247,39 @@ img {
 .dropdown-menu li {
     display: block !important;
     width: 100% !important;
-    list-style: none !important;
     margin: 0 !important;
-    padding: 0 !important;
-    flex: none !important;
 }
 
+
 .dropdown-menu a {
-    padding: 12px 20px !important;
     display: block !important;
-    width: 100% !important;
-    border-bottom: 1px solid #f0f0f0;
-    transition: var(--transition);
-    text-decoration: none !important;
-    color: var(--dark-color) !important;
-    white-space: nowrap;
-    box-sizing: border-box !important;
+    width: 100%;
+    padding: 12px 20px;
+    color: var(--dark-color);
+    text-align: left;
+    /* Ensures text stays left-aligned in the column */
+    border-bottom: 1px solid #f8f9fa;
 }
 
 .dropdown-menu a:hover {
-    background-color: #f8f9fa !important;
-    color: var(--primary-color) !important;
+    background-color: #f0faff;
+    color: var(--primary-color);
+    padding-left: 25px;
 }
 
-.dropdown-menu a:last-child {
-    border-bottom: none !important;
+.dropdown-menu li:last-child a {
+    border-bottom: none;
 }
+
+/* Ensure the chevron rotates on hover */
+.dropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+/* .dropdown-menu a:last-child {
+    border-bottom: none !important;
+} */
 
 .mobile-menu-toggle {
     display: none;
@@ -398,11 +413,13 @@ img {
     scroll-snap-type: x mandatory;
     gap: 30px;
     padding: 20px 0;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .testimonials-slider::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .testimonial {
@@ -626,8 +643,13 @@ img {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInDown {
@@ -635,6 +657,7 @@ img {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -646,6 +669,7 @@ img {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -657,7 +681,7 @@ img {
     .hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .testimonial {
         flex: 0 0 calc(50% - 15px);
     }
@@ -668,27 +692,27 @@ img {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .main-nav {
         display: none;
     }
-    
+
     .mobile-menu-toggle {
         display: block;
     }
-    
+
     .hero {
         padding: 100px 0;
     }
-    
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .testimonial {
         flex: 0 0 calc(100% - 10px);
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
     }
@@ -698,13 +722,13 @@ img {
     .section-header h2 {
         font-size: 2rem;
     }
-    
+
     .hero-buttons .btn {
         display: block;
         width: 100%;
         margin: 10px 0;
     }
-    
+
     .services-grid,
     .features-grid {
         grid-template-columns: 1fr;
