@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - GleamUp Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+
     <style>
-        * {
+        /* * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+        } */
 
-        body {
+        /* body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-        }
+        } */
 
-        .container {
+        .containers {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            margin-top: 20px;
+            /* background: white; */
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
@@ -32,7 +35,11 @@
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 50px 40px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
             text-align: center;
+            border-radius: 12px;
         }
 
         .header h1 {
@@ -241,7 +248,25 @@
 </head>
 
 <body>
-    <div class="container">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Gleam<span>Upp</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="containers">
         <div class="header">
             <h1>🏠 Our Cleaning Services</h1>
             <p>Professional cleaning solutions for every corner of your home</p>
