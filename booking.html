@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cleaning Service - GleamUpp</title>
+    <meta name="description" content="Book your professional cleaning service with GleamUpp. Get instant quotes and book via WhatsApp.">
+    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/booking.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+1234567890"><i class="fas fa-phone"></i> (123) 456-7890</a>
+                <a href="mailto:info@gleamupp.com"><i class="fas fa-envelope"></i> info@gleamupp.com</a>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-outline">Get Free Quote</a>
+                <a href="booking.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Gleam<span>Upp</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/full-home-cleaning.html">Full Home Cleaning</a></li>
+                            <li><a href="services/bathroom-cleaning.html">Bathroom Cleaning</a></li>
+                            <li><a href="services/kitchen-cleaning.html">Kitchen Cleaning</a></li>
+                            <li><a href="services/sofa-mattress-cleaning.html">Sofa & Mattress Cleaning</a></li>
+                            <li><a href="services/fridge-cleaning.html">Fridge Cleaning</a></li>
+                            <li><a href="services/windows-doors-fan-cleaning.html">Windows/Doors/Fan Cleaning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Hero Section -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="booking-hero-content">
+                <h1>Book Your Cleaning Service</h1>
+                <p>Get professional cleaning services at competitive prices. Book now and get your home sparkling clean!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <h2>Service Details</h2>
+                    <form id="booking-form" onsubmit="return validateBookingForm()">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span id="name-error" class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span id="email-error" class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span id="phone-error" class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Select Service *</label>
+                                <select id="service" name="service" onchange="updatePricing()" required>
+                                    <option value="">Choose a service</option>
+                                    <option value="full-home-cleaning">Full Home Cleaning</option>
+                                    <option value="bathroom-cleaning">Bathroom Cleaning</option>
+                                    <option value="kitchen-cleaning">Kitchen Cleaning</option>
+                                    <option value="sofa-mattress-cleaning">Sofa & Mattress Cleaning</option>
+                                    <option value="fridge-cleaning">Fridge Cleaning</option>
+                                    <option value="windows-doors-fan-cleaning">Windows/Doors/Fan Cleaning</option>
+                                </select>
+                                <span id="service-error" class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type" name="property-type" onchange="updatePricing()">
+                                    <option value="1bhk">1 BHK</option>
+                                    <option value="2bhk">2 BHK</option>
+                                    <option value="3bhk">3 BHK</option>
+                                    <option value="4bhk">4+ BHK</option>
+                                    <option value="villa">Villa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="package">Package Type</label>
+                                <select id="package" name="package" onchange="updatePricing()">
+                                    <option value="basic">Basic</option>
+                                    <option value="standard">Standard</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="deep">Deep Clean</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                                <span id="date-error" class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                                <span id="time-error" class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Service Address *</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address" required></textarea>
+                            <span id="address-error" class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests (Optional)</label>
+                            <textarea id="special-requests" name="special-requests" rows="2" placeholder="Any special instructions or requirements"></textarea>
+                        </div>
+
+                        <div class="booking-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                            </button>
+                            <button type="button" onclick="bookViaCall()" class="btn btn-secondary btn-large">
+                                <i class="fas fa-phone"></i> Book via Call
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span class="label">Service:</span>
+                            <span id="summary-service">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Property:</span>
+                            <span id="summary-property">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Package:</span>
+                            <span id="summary-package">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Date:</span>
+                            <span id="summary-date">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Time:</span>
+                            <span id="summary-time">-</span>
+                        </div>
+                        <div class="summary-price">
+                            <span class="label">Estimated Price:</span>
+                            <span id="estimated-price">₹0</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-note">
+                        <p><i class="fas fa-info-circle"></i> Final price may vary based on actual property size and condition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="booking-confirmation" class="booking-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Booking Confirmed!</h2>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Thank you for choosing GleamUpp!</h3>
+                <p>Your booking details have been sent to our WhatsApp. Our team will contact you shortly to confirm your appointment.</p>
+
+                <div class="confirmation-details">
+                    <h4>Booking Details:</h4>
+                    <p><strong>Name:</strong> <span id="confirm-name"></span></p>
+                    <p><strong>Service:</strong> <span id="confirm-service"></span></p>
+                    <p><strong>Date:</strong> <span id="confirm-date"></span></p>
+                    <p><strong>Time:</strong> <span id="confirm-time"></span></p>
+                    <p><strong>Estimated Price:</strong> <span id="confirm-price"></span></p>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="https://wa.me/1234567890?text=Hi%20GleamUpp,%20I%20just%20booked%20a%20cleaning%20service%20online." target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Open WhatsApp
+                    </a>
+                    <button onclick="closeModal()" class="btn btn-secondary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Gleam<span>Upp</span></h2>
+                    <p>Professional cleaning services for homes and businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/full-home-cleaning.html">Full Home Cleaning</a></li>
+                        <li><a href="services/bathroom-cleaning.html">Bathroom Cleaning</a></li>
+                        <li><a href="services/kitchen-cleaning.html">Kitchen Cleaning</a></li>
+                        <li><a href="services/sofa-mattress-cleaning.html">Sofa & Mattress Cleaning</a></li>
+                        <li><a href="services/fridge-cleaning.html">Fridge Cleaning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Cleaning Street, City, State 12345</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@gleamupp.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GleamUpp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Dynamic Pricing System
+        const pricingData = {
+            "full-home-cleaning": {
+                "1bhk": { "basic": 2499, "standard": 3499, "premium": 4499, "deep": 5499 },
+                "2bhk": { "basic": 3499, "standard": 4499, "premium": 5499, "deep": 6499 },
+                "3bhk": { "basic": 4499, "standard": 5499, "premium": 6499, "deep": 7499 },
+                "4bhk": { "basic": 5499, "standard": 6499, "premium": 7499, "deep": 8499 },
+                "villa": { "basic": 6999, "standard": 8499, "premium": 9999, "deep": 11999 }
+            },
+            "bathroom-cleaning": {
+                "1bhk": { "basic": 499, "standard": 699, "premium": 899, "deep": 1099 },
+                "2bhk": { "basic": 799, "standard": 1099, "premium": 1399, "deep": 1699 },
+                "3bhk": { "basic": 1099, "standard": 1499, "premium": 1899, "deep": 2299 },
+                "4bhk": { "basic": 1399, "standard": 1899, "premium": 2399, "deep": 2899 },
+                "villa": { "basic": 1799, "standard": 2399, "premium": 2999, "deep": 3599 }
+            },
+            "kitchen-cleaning": {
+                "1bhk": { "basic": 799, "standard": 1099, "premium": 1399, "deep": 1699 },
+                "2bhk": { "basic": 1099, "standard": 1499, "premium": 1899, "deep": 2299 },
+                "3bhk": { "basic": 1399, "standard": 1899, "premium": 2399, "deep": 2899 },
+                "4bhk": { "basic": 1699, "standard": 2299, "premium": 2899, "deep": 3499 },
+                "villa": { "basic": 2199, "standard": 2999, "premium": 3799, "deep": 4599 }
+            },
+            "sofa-mattress-cleaning": {
+                "1bhk": { "basic": 1499, "standard": 1999, "premium": 2499, "deep": 2999 },
+                "2bhk": { "basic": 1999, "standard": 2499, "premium": 2999, "deep": 3499 },
+                "3bhk": { "basic": 2499, "standard": 2999, "premium": 3499, "deep": 3999 },
+                "4bhk": { "basic": 2999, "standard": 3499, "premium": 3999, "deep": 4499 },
+                "villa": { "basic": 3499, "standard": 3999, "premium": 4499, "deep": 4999 }
+            },
+            "fridge-cleaning": {
+                "1bhk": { "basic": 599, "standard": 799, "premium": 999, "deep": 1199 },
+                "2bhk": { "basic": 799, "standard": 999, "premium": 1199, "deep": 1399 },
+                "3bhk": { "basic": 999, "standard": 1199, "premium": 1399, "deep": 1599 },
+                "4bhk": { "basic": 1199, "standard": 1399, "premium": 1599, "deep": 1799 },
+                "villa": { "basic": 1399, "standard": 1599, "premium": 1799, "deep": 1999 }
+            },
+            "windows-doors-fan-cleaning": {
+                "1bhk": { "basic": 699, "standard": 899, "premium": 1099, "deep": 1299 },
+                "2bhk": { "basic": 899, "standard": 1099, "premium": 1299, "deep": 1499 },
+                "3bhk": { "basic": 1099, "standard": 1299, "premium": 1499, "deep": 1699 },
+                "4bhk": { "basic": 1299, "standard": 1499, "premium": 1699, "deep": 1899 },
+                "villa": { "basic": 1499, "standard": 1699, "premium": 1899, "deep": 2099 }
+            }
+        };
+
+        function updatePricing() {
+            const service = document.getElementById('service').value;
+            const propertyType = document.getElementById('property-type').value;
+            const packageType = document.getElementById('package').value;
+
+            if (service && propertyType && packageType && pricingData[service]) {
+                const price = pricingData[service][propertyType][packageType];
+                document.getElementById('estimated-price').textContent = `₹${price.toLocaleString('en-IN')}`;
+                document.getElementById('confirm-price').textContent = `₹${price.toLocaleString('en-IN')}`;
+
+                // Update summary
+                const serviceSelect = document.getElementById('service');
+                const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+                document.getElementById('summary-service').textContent = serviceText;
+                document.getElementById('summary-property').textContent = propertyType.toUpperCase();
+                document.getElementById('summary-package').textContent = packageType.charAt(0).toUpperCase() + packageType.slice(1);
+            }
+        }
+
+        function updateSummary() {
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if (date) {
+                const formattedDate = new Date(date).toLocaleDateString('en-IN', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                document.getElementById('summary-date').textContent = formattedDate;
+                document.getElementById('confirm-date').textContent = formattedDate;
+            }
+
+            if (time) {
+                document.getElementById('summary-time').textContent = time;
+                document.getElementById('confirm-time').textContent = time;
+            }
+        }
+
+        function bookViaCall() {
+            window.location.href = 'tel:+1234567890';
+        }
+
+        function closeModal() {
+            document.getElementById('booking-confirmation').style.display = 'none';
+        }
+
+        // Enhanced form validation with WhatsApp booking
+        function validateBookingForm() {
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const service = document.getElementById('service');
+            const date = document.getElementById('date');
+            const time = document.getElementById('time');
+            const address = document.getElementById('address');
+
+            let isValid = true;
+
+            // Reset error messages
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.textContent = '';
+            });
+
+            // Name validation
+            if (name.value.trim() === '') {
+                document.getElementById('name-error').textContent = 'Name is required';
+                isValid = false;
+            }
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                document.getElementById('email-error').textContent = 'Valid email is required';
+                isValid = false;
+            }
+
+            // Phone validation
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone.value.replace(/\D/g, ''))) {
+                document.getElementById('phone-error').textContent = 'Valid phone number is required';
+                isValid = false;
+            }
+
+            // Service validation
+            if (service.value === '') {
+                document.getElementById('service-error').textContent = 'Please select a service';
+                isValid = false;
+            }
+
+            // Date validation
+            if (date.value === '') {
+                document.getElementById('date-error').textContent = 'Date is required';
+                isValid = false;
+            } else {
+                const selectedDate = new Date(date.value);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+
+                if (selectedDate < today) {
+                    document.getElementById('date-error').textContent = 'Date cannot be in the past';
+                    isValid = false;
+                }
+            }
+
+            // Time validation
+            if (time.value === '') {
+                document.getElementById('time-error').textContent = 'Time is required';
+                isValid = false;
+            }
+
+            // Address validation
+            if (address.value.trim() === '') {
+                document.getElementById('address-error').textContent = 'Address is required';
+                isValid = false;
+            }
+
+           if (isValid) {
+    try {
+        // 1. Define variables safely
+        const serviceSelect = document.getElementById('service');
+        const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+        const propElement = document.getElementById('property-type');
+        const packElement = document.getElementById('package');
+        const propertyType = propElement ? propElement.value : "N/A";
+        const packageType = packElement ? packElement.value : "Standard";
+        const price = document.getElementById('estimated-price').textContent;
+        const formattedDate = new Date(date.value).toLocaleDateString('en-IN');
+
+        // 2. Update the Confirmation Modal UI
+        document.getElementById('confirm-name').textContent = name.value;
+        document.getElementById('confirm-service').textContent = serviceText;
+
+        // 3. Show the Modal and Hide the Form
+        const formContainer = document.querySelector('.booking-form-container');
+        const modal = document.getElementById('booking-confirmation');
+        
+        if (formContainer) formContainer.style.display = 'none';
+        if (modal) modal.style.display = 'block';
+
+        // 4. Build the WhatsApp Message
+        const whatsappMessage = `*New Booking from GleamUpp Website*
+
+*Name:* ${name.value}
+*Email:* ${email.value}
+*Phone:* ${phone.value}
+*Service:* ${serviceText}
+*Property:* ${propertyType.toUpperCase()}
+*Package:* ${packageType}
+*Date:* ${formattedDate}
+*Time:* ${time.value}
+*Address:* ${address.value}
+*Price:* ${price}`;
+
+        // 5. Update the Link in the Modal
+        const whatsappLink = document.querySelector('.modal-actions a');
+        if (whatsappLink) {
+            whatsappLink.href = `https://wa.me/916901522322?text=${encodeURIComponent(whatsappMessage)}`;
+        }
+
+        // 6. STOP THE REFRESH
+        return false;
+
+    } catch (error) {
+        console.error("JS Error:", error);
+        alert("Something went wrong with the form logic. Check console.");
+        return false; // Still return false to prevent refresh so you can see the error
+    }
+
+
+            }
+            return false;
+        }
+
+        // Initialize pricing on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePricing();
+            updateSummary();
+
+            // Add event listeners for real-time updates
+            document.getElementById('date').addEventListener('change', updateSummary);
+            document.getElementById('time').addEventListener('change', updateSummary);
+        });
+    </script>
+</body>
+</html>

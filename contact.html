@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GleamUpp</title>
+    <meta name="description" content="Get in touch with GleamUpp for professional cleaning services. Contact us for quotes, bookings, or inquiries.">
+    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+916901522322"><i class="fas fa-phone"></i>6901522322</a>
+                <a href="mailto:info@gleamupp.com"><i class="fas fa-envelope"></i> info@gleamupp.com</a>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-outline">Get Free Quote</a>
+                <a href="booking.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Gleam<span>Upp</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/full-home-cleaning.html">Full Home Cleaning</a></li>
+                            <li><a href="services/bathroom-cleaning.html">Bathroom Cleaning</a></li>
+                            <li><a href="services/kitchen-cleaning.html">Kitchen Cleaning</a></li>
+                            <li><a href="services/sofa-mattress-cleaning.html">Sofa & Mattress Cleaning</a></li>
+                            <li><a href="services/fridge-cleaning.html">Fridge Cleaning</a></li>
+                            <li><a href="services/windows-doors-fan-cleaning.html">Windows/Doors/Fan Cleaning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- need to make changes from here  -->
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Contact Us</h1>
+                <p>Ready to experience the GleamUpp difference? Get in touch with us today!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about our services? Need a quote? Want to book a cleaning service? We're here to help!</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Call Us</h3>
+                                <p>+91 6901522322</p>
+                                <p>Mon - Sat: 8:00 AM - 8:00 PM</p>
+                                <a href="tel:+916901522322" class="btn btn-primary">Call Now</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p>+91 6901522322</p>
+                                <p>Quick booking & instant support</p>
+                                <a href="https://wa.me/916901522322?text=Hi%20GleamUpp,%20I%20need%20information%20about%20your%20cleaning%20services." target="_blank" class="btn btn-success">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email Us</h3>
+                                <p>info@gleamupp.com</p>
+                                <p>We'll respond within 24 hours</p>
+                                <a href="mailto:info@gleamupp.com" class="btn btn-secondary">Send Email</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Visit Us</h3>
+                                <!-- <p>123 Cleaning Street<br>City, State 12345</p> -->
+                                <p>India, Banguluru</p>
+                                <!-- <a href="#" class="btn btn-outline">Get Directions</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="office-hours">
+                        <h3>Office Hours</h3>
+                        <ul>
+                            <li><span>Monday - Friday:</span> 8:00 AM - 8:00 PM</li>
+                            <li><span>Saturday:</span> 9:00 AM - 6:00 PM</li>
+                            <li><span>Sunday:</span> Closed</li>
+                        </ul>
+                    </div>
+                </div>
+via
+                <div class="contact-form-container">
+                    <h2>Send us a Message</h2>
+                    <form id="contact-form" onsubmit="return validateContactForm()">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" required>
+                                <span id="contact-name-error" class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                                <span id="contact-email-error" class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                                <span id="contact-phone-error" class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Select subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="quote">Request Quote</option>
+                                    <option value="booking">Service Booking</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="partnership">Partnership</option>
+                                </select>
+                                <span id="contact-subject-error" class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+                            <span id="contact-message-error" class="error-message"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <!-- <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button> -->
+                            <button type="button" onclick="sendViaWhatsApp()" class="btn btn-success btn-large">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <h2>Find Us</h2>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>SOON!</p>
+                    <!-- <p>Interactive map will be loaded here</p>
+                    <p>123 Cleaning Street, City, State 12345</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- to this -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Gleam<span>Upp</span></h2>
+                    <p>Professional cleaning services for homes and businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/full-home-cleaning.html">Full Home Cleaning</a></li>
+                        <li><a href="services/bathroom-cleaning.html">Bathroom Cleaning</a></li>
+                        <li><a href="services/kitchen-cleaning.html">Kitchen Cleaning</a></li>
+                        <li><a href="services/sofa-mattress-cleaning.html">Sofa & Mattress Cleaning</a></li>
+                        <li><a href="services/fridge-cleaning.html">Fridge Cleaning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Cleaning Street, City, State 12345</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@gleamupp.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GleamUpp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function validateContactForm() {
+            const name = document.getElementById('contact-name');
+            const email = document.getElementById('contact-email');
+            const phone = document.getElementById('contact-phone');
+            const subject = document.getElementById('contact-subject');
+            const message = document.getElementById('contact-message');
+
+            let isValid = true;
+
+            // Reset error messages
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.textContent = '';
+            });
+
+            // Name validation
+            if (name.value.trim() === '') {
+                document.getElementById('contact-name-error').textContent = 'Name is required';
+                isValid = false;
+            }
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                document.getElementById('contact-email-error').textContent = 'Valid email is required';
+                isValid = false;
+            }
+
+            // Phone validation (optional but if provided, must be valid)
+            if (phone.value && !/^\d{10}$/.test(phone.value.replace(/\D/g, ''))) {
+                document.getElementById('contact-phone-error').textContent = 'Valid phone number is required';
+                isValid = false;
+            }
+
+            // Subject validation
+            if (subject.value === '') {
+                document.getElementById('contact-subject-error').textContent = 'Please select a subject';
+                isValid = false;
+            }
+
+            // Message validation
+            if (message.value.trim() === '') {
+                document.getElementById('contact-message-error').textContent = 'Message is required';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Show success message or redirect
+                alert('Thank you for your message! We will get back to you within 24 hours.');
+                document.getElementById('contact-form').reset();
+            }
+
+            return false; // Prevent form submission for demo
+        }
+
+        function sendViaWhatsApp() {
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const phone = document.getElementById('contact-phone').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields before sending via WhatsApp.');
+                return;
+            }
+
+            const subjectText = document.getElementById('contact-subject').options[document.getElementById('contact-subject').selectedIndex].text;
+            const whatsappMessage = `Hi GleamUpp! I have a ${subjectText.toLowerCase()}:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+
+Message:
+${message}
+
+Please get back to me. Thank you!`;
+
+            const whatsappUrl = `https://wa.me/916901522322?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
