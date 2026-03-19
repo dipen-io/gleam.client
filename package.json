@@ -1,0 +1,25 @@
+{
+  "name": "gleamup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d . -b production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dipen-io/gleam.client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dipen-io/gleam.client/issues"
+  },
+  "homepage": "https://github.com/dipen-io/gleam.client#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

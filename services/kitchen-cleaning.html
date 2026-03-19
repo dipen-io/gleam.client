@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Cleaning - GleamUp Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .calculator-title {
+            font-size: 1.8em;
+            color: #c0392b;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .input-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+            background: white;
+            cursor: pointer;
+        }
+
+        .input-group select:focus {
+            outline: none;
+            border-color: #c0392b;
+        }
+
+        /* Price Display */
+        .price-display {
+            background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .price-display:hover {
+            transform: scale(1.02);
+        }
+
+        .price-label {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .price-amount {
+            font-size: 4em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 10px 0;
+        }
+
+        .price-details {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        /* Services Grid */
+        .services-section {
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #c0392b;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .price-table th {
+            background: #fff5f5;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #c0392b;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .price-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+
+        .price-table tr:hover td {
+            background: #fff5f5;
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: #e74c3c;
+            font-size: 1.1em;
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Appliances Section */
+        .appliances-section {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .appliances-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .appliance-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .appliance-card:hover {
+            transform: scale(1.02);
+        }
+
+        .appliance-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .appliance-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .appliance-desc {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .appliance-price {
+            font-weight: 700;
+            color: #1976d2;
+            font-size: 1.3em;
+        }
+
+        /* Add-ons Section */
+        .addons-section {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .addon-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .addon-item:hover {
+            transform: scale(1.02);
+        }
+
+        .addon-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addon-desc {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: #7b1fa2;
+            font-size: 1.2em;
+        }
+
+        /* Combo Section */
+        .combo-section {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .combo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .combo-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .combo-card::before {
+            content: 'COMBO';
+            position: absolute;
+            top: -10px;
+            right: -30px;
+            background: #e74c3c;
+            color: white;
+            padding: 20px 40px 5px;
+            transform: rotate(45deg);
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+
+        .combo-title {
+            font-size: 1.5em;
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .combo-desc {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .combo-price {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #27ae60;
+        }
+
+        .combo-type {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+
+        /* Info Section */
+        .info-section {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .info-card h4 {
+            color: #f57c00;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .info-card p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .price-amount {
+                font-size: 2.5em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card, .addon-item, .combo-card, .appliance-card, .info-card {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍳 GleamUp Services</h1>
+            <p>Professional Kitchen Cleaning Solutions</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Interactive Price Calculator -->
+            <div class="calculator-section">
+                <h2 class="calculator-title">💰 Kitchen Cleaning Calculator</h2>
+                <div class="calculator-grid">
+                    <div class="input-group">
+                        <label for="kitchenType">Kitchen Type</label>
+                        <select id="kitchenType" onchange="calculatePrice()">
+                            <option value="">Select Type</option>
+                            <option value="occupied">Occupied Kitchen</option>
+                            <option value="unoccupied">Unoccupied Kitchen</option>
+                            <option value="movein">Move-In Kitchen</option>
+                            <option value="standard">Standard Deep Clean</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="applianceCount">Kitchen Appliances</label>
+                        <select id="applianceCount" onchange="calculatePrice()">
+                            <option value="">Select Appliances (Optional)</option>
+                            <option value="fridge">+ Refrigerator</option>
+                            <option value="chimney">+ Chimney</option>
+                            <option value="microwave">+ Microwave</option>
+                            <option value="all">+ All Appliances</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="extras">Extra Services</label>
+                        <select id="extras" onchange="calculatePrice()">
+                            <option value="">No Extras</option>
+                            <option value="exhaust">+ Exhaust Fan</option>
+                            <option value="window">+ Window</option>
+                            <option value="both">+ Exhaust Fan + Window</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="price-display" id="priceDisplay" style="display: none;">
+                    <div class="price-label">Estimated Price</div>
+                    <div class="price-amount" id="priceAmount">₹ 0</div>
+                    <div class="price-details" id="priceDetails">Select options to see price</div>
+                </div>
+
+                <div class="price-display" id="placeholderDisplay" style="background: #95a5a6;">
+                    <div class="price-label">Price Calculator</div>
+                    <div class="price-amount" style="font-size: 1.5em;">Select options above</div>
+                    <div class="price-details">Choose kitchen type and add-ons</div>
+                </div>
+            </div>
+
+            <!-- Main Kitchen Services -->
+            <div class="services-section">
+                <h2 class="section-title">Kitchen Cleaning Packages</h2>
+                <div class="services-grid">
+                    <!-- Occupied Kitchen -->
+                    <div class="service-card">
+                        <div class="service-header">🏠 Occupied Kitchen</div>
+                        <div class="service-content">
+                            <div style="text-align: center; padding: 20px; background: #fff5f5; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 3em; font-weight: 700; color: #e74c3c;">₹ 1,099</div>
+                                <p style="color: #666; margin-top: 10px;">for occupied homes</p>
+                            </div>
+                            <h4 style="margin-bottom: 15px; color: #c0392b;">What's Included:</h4>
+                            <ul class="features-list">
+                                <li>Countertop deep cleaning</li>
+                                <li>Stove/hob cleaning</li>
+                                <li>Sink scrubbing & disinfection</li>
+                                <li>Cabinet exterior wipe-down</li>
+                                <li>Tile backsplash cleaning</li>
+                                <li>Floor mopping & sanitization</li>
+                                <li>Trash area cleaning</li>
+                                <li>Light fixture dusting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Unoccupied Kitchen -->
+                    <div class="service-card">
+                        <div class="service-header">🔑 Unoccupied Kitchen</div>
+                        <div class="service-content">
+                            <div style="text-align: center; padding: 20px; background: #e3f2fd; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 3em; font-weight: 700; color: #1976d2;">₹ 849</div>
+                                <p style="color: #666; margin-top: 10px;">for vacant properties</p>
+                            </div>
+                            <h4 style="margin-bottom: 15px; color: #c0392b;">What's Included:</h4>
+                            <ul class="features-list">
+                                <li>Complete surface wipe-down</li>
+                                <li>Empty cabinet cleaning</li>
+                                <li>Appliance exterior cleaning</li>
+                                <li>Sink & faucet descaling</li>
+                                <li>Floor deep cleaning</li>
+                                <li>Wall spot cleaning</li>
+                                <li>Ventilation cleaning</li>
+                                <li>Final sanitization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Move-In Kitchen -->
+                    <div class="service-card">
+                        <div class="service-header">✨ Move-In Kitchen</div>
+                        <div class="service-content">
+                            <div style="text-align: center; padding: 20px; background: #f3e5f5; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 3em; font-weight: 700; color: #7b1fa2;">₹ 1,249</div>
+                                <p style="color: #666; margin-top: 10px;">deep clean for new occupants</p>
+                            </div>
+                            <h4 style="margin-bottom: 15px; color: #c0392b;">What's Included:</h4>
+                            <ul class="features-list">
+                                <li>Heavy-duty degreasing</li>
+                                <li>Interior cabinet cleaning</li>
+                                <li>Drawer organization & cleaning</li>
+                                <li>Appliance deep cleaning</li>
+                                <li>Grout restoration</li>
+                                <li>Hard water stain removal</li>
+                                <li>Complete disinfection</li>
+                                <li>Deodorizing treatment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Standard Deep Clean -->
+                    <!-- <div class="service-card">
+                        <div class="service-header">🧼 Standard Deep Clean</div>
+                        <div class="service-content">
+                            <div style="text-align: center; padding: 20px; background: #e8f5e9; border-radius: 10px; margin-bottom: 20px;">
+                                <div style="font-size: 3em; font-weight: 700; color: #2e7d32;">₹ 1,399</div>
+                                <p style="color: #666; margin-top: 10px;">comprehensive deep cleaning</p>
+                            </div>
+                            <h4 style="margin-bottom: 15px; color: #c0392b;">What's Included:</h4>
+                            <ul class="features-list">
+                                <li>Everything in Move-In cleaning</li>
+                                <li>Behind appliance cleaning</li>
+                                <li>Under sink deep clean</li>
+                                <li>Ceiling & corners</li>
+                                <li>Door & frame cleaning</li>
+                                <li>Switchboard sanitization</li>
+                                <li>Exhaust fan cleaning</li>
+                                <li>Final inspection</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Kitchen Appliances -->
+            <div class="appliances-section">
+                <h2 class="section-title" style="margin-bottom: 10px;">🔌 Kitchen Appliance Cleaning</h2>
+                <div class="appliances-grid">
+                    <div class="appliance-card">
+                        <div class="appliance-icon">❄️</div>
+                        <div class="appliance-name">Refrigerator</div>
+                        <div class="appliance-desc">Single/Double Door</div>
+                        <div class="appliance-price">₹ 249</div>
+                        <p style="font-size: 0.8em; color: #999; margin-top: 5px;">All Types: ₹ 349</p>
+                    </div>
+
+                    <div class="appliance-card">
+                        <div class="appliance-icon">🔥</div>
+                        <div class="appliance-name">Chimney</div>
+                        <div class="appliance-desc">All Types & Sizes</div>
+                        <div class="appliance-price">₹ 299</div>
+                        <p style="font-size: 0.8em; color: #999; margin-top: 5px;">Deep filter cleaning</p>
+                    </div>
+
+                    <div class="appliance-card">
+                        <div class="appliance-icon">📟</div>
+                        <div class="appliance-name">Microwave</div>
+                        <div class="appliance-desc">Interior & Exterior</div>
+                        <div class="appliance-price">₹ 149</div>
+                        <p style="font-size: 0.8em; color: #999; margin-top: 5px;">Stain removal included</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kitchen + Bathroom Combo -->
+            <div class="combo-section">
+                <h2 class="section-title" style="margin-bottom: 10px;">💎 Kitchen + Bathroom Combos</h2>
+                <div class="combo-grid">
+                    <div class="combo-card">
+                        <div class="combo-title">Combo 1+1</div>
+                        <div class="combo-desc">1 Kitchen (Occupied) + 1 Bathroom (Standard)</div>
+                        <div class="combo-price">₹ 1,099</div>
+                        <span class="combo-type">Save ₹ 149</span>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 749 + ₹ 399 = ₹ 1,248</p>
+                    </div>
+
+                    <div class="combo-card">
+                        <div class="combo-title">Combo 1+2</div>
+                        <div class="combo-desc">1 Kitchen (Move-In) + 1 Bathroom (Move-In)</div>
+                        <div class="combo-price">₹ 1,699</div>
+                        <span class="combo-type">Save ₹ 269</span>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 1,249 + ₹ 499 = ₹ 1,968</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add-ons for Kitchen -->
+            <div class="addons-section">
+                <h2 class="section-title" style="margin-bottom: 10px;">➕ Add-on Services</h2>
+                <div class="addons-grid">
+                    <div class="addon-item">
+                        <div>
+                            <div class="addon-name">Exhaust Fan Cleaning</div>
+                            <div class="addon-desc">Kitchen exhaust fan deep clean</div>
+                        </div>
+                        <div class="addon-price">₹ 69</div>
+                    </div>
+
+                    <div class="addon-item">
+                        <div>
+                            <div class="addon-name">Kitchen Window</div>
+                            <div class="addon-desc">Inside & outside cleaning</div>
+                        </div>
+                        <div class="addon-price">₹ 199</div>
+                    </div>
+
+                    <div class="addon-item">
+                        <div>
+                            <div class="addon-name">Store/Utility</div>
+                            <div class="addon-desc">Adjacent storage area</div>
+                        </div>
+                        <div class="addon-price">₹ 299</div>
+                    </div>
+
+                    <div class="addon-item">
+                        <div>
+                            <div class="addon-name">Balcony Cleaning</div>
+                            <div class="addon-desc">Kitchen attached balcony</div>
+                        </div>
+                        <div class="addon-price">₹ 349</div>
+                    </div>
+
+                    <div class="addon-item">
+                        <div>
+                            <div class="addon-name">Extra Bathroom</div>
+                            <div class="addon-desc">Standard bathroom cleaning</div>
+                        </div>
+                        <div class="addon-price">₹ 399</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Information -->
+            <div class="info-section">
+                <h2 class="section-title" style="margin-bottom: 10px;">ℹ️ Service Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>⏱️ Duration</h4>
+                        <p>Occupied: 2-3 hours<br>Unoccupied: 1.5-2 hours<br>Move-In/Deep: 3-4 hours</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🧴 Cleaning Supplies</h4>
+                        <p>We bring all professional-grade degreasers, sanitizers, and equipment. Eco-friendly options available.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>👥 Staff</h4>
+                        <p>2-3 trained professionals for standard jobs. Background-verified and uniformed.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>✅ Guarantee</h4>
+                        <p>100% satisfaction guarantee. Free re-clean if standards are not met.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📅 Scheduling</h4>
+                        <p>Available 7 days a week. Morning (8AM-12PM) and Evening (4PM-8PM) slots.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>💳 Payment</h4>
+                        <p>Cash, UPI, Credit/Debit cards accepted. Pay after service completion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Services -->
+            <div class="services-section" style="margin-top: 40px;">
+                <h2 class="section-title">Related Services</h2>
+                <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="service-card">
+                        <div class="service-header" style="background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);">🚿 Bathroom Cleaning</div>
+                        <div class="service-content">
+                            <table class="price-table">
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr><td>Standard</td><td class="price-tag">₹ 399</td></tr>
+                                <tr><td>Move-In</td><td class="price-tag">₹ 499</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🏠 Full Home</div>
+                        <div class="service-content">
+                            <p style="text-align: center; color: #666; margin-bottom: 15px;">Complete home cleaning packages</p>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.5em; font-weight: 700; color: #764ba2;">₹ 2,849 - ₹ 6,949</span>
+                                <p style="font-size: 0.9em; color: #999; margin-top: 5px;">Based on property size & type</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🛋️ Sofa Cleaning</div>
+                        <div class="service-content">
+                            <table class="price-table">
+                                <tr>
+                                    <th>Seats</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr><td>3-4 Seater</td><td class="price-tag">₹ 399</td></tr>
+                                <tr><td>5-6 Seater</td><td class="price-tag">₹ 549</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Price data structure
+        const prices = {
+            occupied: 749,
+            unoccupied: 849,
+            movein: 1249,
+            standard: 1399
+        };
+
+        const appliancePrices = {
+            fridge: 249,
+            chimney: 299,
+            microwave: 149,
+            all: 697
+        };
+
+        const extraPrices = {
+            exhaust: 69,
+            window: 199,
+            both: 268
+        };
+
+        function calculatePrice() {
+            const kitchenType = document.getElementById('kitchenType').value;
+            const appliance = document.getElementById('applianceCount').value;
+            const extras = document.getElementById('extras').value;
+
+            const priceDisplay = document.getElementById('priceDisplay');
+            const placeholderDisplay = document.getElementById('placeholderDisplay');
+            const priceAmount = document.getElementById('priceAmount');
+            const priceDetails = document.getElementById('priceDetails');
+
+            if (kitchenType) {
+                let basePrice = prices[kitchenType];
+                let totalPrice = basePrice;
+                let details = '';
+
+                // Kitchen type text
+                const typeText = {
+                    'occupied': 'Occupied Kitchen',
+                    'unoccupied': 'Unoccupied Kitchen',
+                    'movein': 'Move-In Kitchen',
+                    'standard': 'Standard Deep Clean'
+                };
+
+                details = typeText[kitchenType];
+
+                // Add appliances
+                if (appliance && appliance !== '') {
+                    totalPrice += appliancePrices[appliance];
+                    const applianceText = {
+                        'fridge': ' + Refrigerator',
+                        'chimney': ' + Chimney',
+                        'microwave': ' + Microwave',
+                        'all': ' + All Appliances'
+                    };
+                    details += applianceText[appliance];
+                }
+
+                // Add extras
+                if (extras && extras !== '') {
+                    totalPrice += extraPrices[extras];
+                    const extraText = {
+                        'exhaust': ' + Exhaust Fan',
+                        'window': ' + Window',
+                        'both': ' + Exhaust Fan + Window'
+                    };
+                    details += extraText[extras];
+                }
+
+                priceAmount.textContent = '₹ ' + totalPrice.toLocaleString();
+                priceDetails.textContent = details;
+
+                priceDisplay.style.display = 'block';
+                placeholderDisplay.style.display = 'none';
+
+                // Add animation
+                priceDisplay.style.animation = 'none';
+                setTimeout(() => {
+                    priceDisplay.style.animation = 'fadeIn 0.5s ease-out';
+                }, 10);
+            } else {
+                priceDisplay.style.display = 'none';
+                placeholderDisplay.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
