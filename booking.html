@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Cleaning Service - GleamUpp</title>
-    <meta name="description" content="Book your professional cleaning service with GleamUpp. Get instant quotes and book via WhatsApp.">
+    <meta name="description"
+        content="Book your professional cleaning service with GleamUpp. Get instant quotes and book via WhatsApp.">
     <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/booking.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Sticky Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="contact-info">
-                <a href="tel:+1234567890"><i class="fas fa-phone"></i> (123) 456-7890</a>
+                <a href="tel:+1234567890"><i class="fas fa-phone"></i> (+91) 6901522322</a>
                 <a href="mailto:info@gleamupp.com"><i class="fas fa-envelope"></i> info@gleamupp.com</a>
             </div>
             <div class="cta-buttons">
@@ -64,7 +68,8 @@
         <div class="container">
             <div class="booking-hero-content">
                 <h1>Book Your Cleaning Service</h1>
-                <p>Get professional cleaning services at competitive prices. Book now and get your home sparkling clean!</p>
+                <p>Get professional cleaning services at competitive prices. Book now and get your home sparkling clean!
+                </p>
             </div>
         </div>
     </section>
@@ -159,13 +164,15 @@
 
                         <div class="form-group">
                             <label for="address">Service Address *</label>
-                            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address" required></textarea>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address"
+                                required></textarea>
                             <span id="address-error" class="error-message"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="special-requests">Special Requests (Optional)</label>
-                            <textarea id="special-requests" name="special-requests" rows="2" placeholder="Any special instructions or requirements"></textarea>
+                            <textarea id="special-requests" name="special-requests" rows="2"
+                                placeholder="Any special instructions or requirements"></textarea>
                         </div>
 
                         <div class="booking-actions">
@@ -209,7 +216,8 @@
                     </div>
 
                     <div class="pricing-note">
-                        <p><i class="fas fa-info-circle"></i> Final price may vary based on actual property size and condition</p>
+                        <p><i class="fas fa-info-circle"></i> Final price may vary based on actual property size and
+                            condition</p>
                     </div>
                 </div>
             </div>
@@ -228,7 +236,8 @@
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <h3>Thank you for choosing GleamUpp!</h3>
-                <p>Your booking details have been sent to our WhatsApp. Our team will contact you shortly to confirm your appointment.</p>
+                <p>Your booking details have been sent to our WhatsApp. Our team will contact you shortly to confirm
+                    your appointment.</p>
 
                 <div class="confirmation-details">
                     <h4>Booking Details:</h4>
@@ -240,7 +249,8 @@
                 </div>
 
                 <div class="modal-actions">
-                    <a href="https://wa.me/1234567890?text=Hi%20GleamUpp,%20I%20just%20booked%20a%20cleaning%20service%20online." target="_blank" class="btn btn-primary">
+                    <a href="https://wa.me/1234567890?text=Hi%20GleamUpp,%20I%20just%20booked%20a%20cleaning%20service%20online."
+                        target="_blank" class="btn btn-primary">
                         <i class="fab fa-whatsapp"></i> Open WhatsApp
                     </a>
                     <button onclick="closeModal()" class="btn btn-secondary">Close</button>
@@ -387,7 +397,7 @@
         }
 
         function bookViaCall() {
-            window.location.href = 'tel:+1234567890';
+            window.location.href = 'tel:+916901522322';
         }
 
         function closeModal() {
@@ -465,31 +475,31 @@
                 isValid = false;
             }
 
-           if (isValid) {
-    try {
-        // 1. Define variables safely
-        const serviceSelect = document.getElementById('service');
-        const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
-        const propElement = document.getElementById('property-type');
-        const packElement = document.getElementById('package');
-        const propertyType = propElement ? propElement.value : "N/A";
-        const packageType = packElement ? packElement.value : "Standard";
-        const price = document.getElementById('estimated-price').textContent;
-        const formattedDate = new Date(date.value).toLocaleDateString('en-IN');
+            if (isValid) {
+                try {
+                    // 1. Define variables safely
+                    const serviceSelect = document.getElementById('service');
+                    const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+                    const propElement = document.getElementById('property-type');
+                    const packElement = document.getElementById('package');
+                    const propertyType = propElement ? propElement.value : "N/A";
+                    const packageType = packElement ? packElement.value : "Standard";
+                    const price = document.getElementById('estimated-price').textContent;
+                    const formattedDate = new Date(date.value).toLocaleDateString('en-IN');
 
-        // 2. Update the Confirmation Modal UI
-        document.getElementById('confirm-name').textContent = name.value;
-        document.getElementById('confirm-service').textContent = serviceText;
+                    // 2. Update the Confirmation Modal UI
+                    document.getElementById('confirm-name').textContent = name.value;
+                    document.getElementById('confirm-service').textContent = serviceText;
 
-        // 3. Show the Modal and Hide the Form
-        const formContainer = document.querySelector('.booking-form-container');
-        const modal = document.getElementById('booking-confirmation');
-        
-        if (formContainer) formContainer.style.display = 'none';
-        if (modal) modal.style.display = 'block';
+                    // 3. Show the Modal and Hide the Form
+                    const formContainer = document.querySelector('.booking-form-container');
+                    const modal = document.getElementById('booking-confirmation');
 
-        // 4. Build the WhatsApp Message
-        const whatsappMessage = `*New Booking from GleamUpp Website*
+                    if (formContainer) formContainer.style.display = 'none';
+                    if (modal) modal.style.display = 'block';
+
+                    // 4. Build the WhatsApp Message
+                    const whatsappMessage = `*New Booking from GleamUpp Website*
 
 *Name:* ${name.value}
 *Email:* ${email.value}
@@ -502,20 +512,20 @@
 *Address:* ${address.value}
 *Price:* ${price}`;
 
-        // 5. Update the Link in the Modal
-        const whatsappLink = document.querySelector('.modal-actions a');
-        if (whatsappLink) {
-            whatsappLink.href = `https://wa.me/916901522322?text=${encodeURIComponent(whatsappMessage)}`;
-        }
+                    // 5. Update the Link in the Modal
+                    const whatsappLink = document.querySelector('.modal-actions a');
+                    if (whatsappLink) {
+                        whatsappLink.href = `https://wa.me/916901522322?text=${encodeURIComponent(whatsappMessage)}`;
+                    }
 
-        // 6. STOP THE REFRESH
-        return false;
+                    // 6. STOP THE REFRESH
+                    return false;
 
-    } catch (error) {
-        console.error("JS Error:", error);
-        alert("Something went wrong with the form logic. Check console.");
-        return false; // Still return false to prevent refresh so you can see the error
-    }
+                } catch (error) {
+                    console.error("JS Error:", error);
+                    alert("Something went wrong with the form logic. Check console.");
+                    return false; // Still return false to prevent refresh so you can see the error
+                }
 
 
             }
@@ -523,7 +533,7 @@
         }
 
         // Initialize pricing on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             updatePricing();
             updateSummary();
 
@@ -533,4 +543,5 @@
         });
     </script>
 </body>
+
 </html>
