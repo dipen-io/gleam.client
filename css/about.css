@@ -16,20 +16,6 @@
     margin-right: 10px;
 }
 
-.site-header {
-    padding: 20px 0;
-    background: white;
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .logo h1 {
     font-size: 1.8rem;
@@ -41,10 +27,6 @@
     color: var(--primary-color);
 }
 
-.main-nav ul {
-    display: flex;
-    gap: 30px;
-}
 
 .main-nav a {
     color: var(--text-dark);
