@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            background: linear-gradient(135deg, #f4f0f0 0%, #feca57 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -23,7 +24,7 @@
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }
 
@@ -49,7 +50,7 @@
             font-size: 3em;
             margin-bottom: 10px;
             position: relative;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .header p {
@@ -68,7 +69,7 @@
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .calculator-title {
@@ -90,13 +91,13 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .input-group:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .input-group label {
@@ -133,7 +134,7 @@
             border-radius: 15px;
             text-align: center;
             margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transform: scale(1);
             transition: transform 0.3s;
         }
@@ -153,7 +154,7 @@
         .price-amount {
             font-size: 4em;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             margin: 10px 0;
         }
 
@@ -199,14 +200,14 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e0e0e0;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .service-header {
@@ -294,7 +295,7 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s;
         }
 
@@ -347,7 +348,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s;
         }
 
@@ -392,7 +393,7 @@
             padding: 25px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -457,7 +458,7 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         .info-card h4 {
@@ -493,18 +494,24 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .service-card, .addon-item, .combo-card, .appliance-card, .info-card {
+        .service-card,
+        .addon-item,
+        .combo-card,
+        .appliance-card,
+        .info-card {
             animation: fadeIn 0.6s ease-out;
         }
     </style>
-<base target="_blank">
+    <base target="_blank">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -571,7 +578,8 @@
                     <div class="service-card">
                         <div class="service-header">🏠 Occupied Kitchen</div>
                         <div class="service-content">
-                            <div style="text-align: center; padding: 20px; background: #fff5f5; border-radius: 10px; margin-bottom: 20px;">
+                            <div
+                                style="text-align: center; padding: 20px; background: #fff5f5; border-radius: 10px; margin-bottom: 20px;">
                                 <div style="font-size: 3em; font-weight: 700; color: #e74c3c;">₹ 1,099</div>
                                 <p style="color: #666; margin-top: 10px;">for occupied homes</p>
                             </div>
@@ -593,7 +601,8 @@
                     <div class="service-card">
                         <div class="service-header">🔑 Unoccupied Kitchen</div>
                         <div class="service-content">
-                            <div style="text-align: center; padding: 20px; background: #e3f2fd; border-radius: 10px; margin-bottom: 20px;">
+                            <div
+                                style="text-align: center; padding: 20px; background: #e3f2fd; border-radius: 10px; margin-bottom: 20px;">
                                 <div style="font-size: 3em; font-weight: 700; color: #1976d2;">₹ 849</div>
                                 <p style="color: #666; margin-top: 10px;">for vacant properties</p>
                             </div>
@@ -615,7 +624,8 @@
                     <div class="service-card">
                         <div class="service-header">✨ Move-In Kitchen</div>
                         <div class="service-content">
-                            <div style="text-align: center; padding: 20px; background: #f3e5f5; border-radius: 10px; margin-bottom: 20px;">
+                            <div
+                                style="text-align: center; padding: 20px; background: #f3e5f5; border-radius: 10px; margin-bottom: 20px;">
                                 <div style="font-size: 3em; font-weight: 700; color: #7b1fa2;">₹ 1,249</div>
                                 <p style="color: #666; margin-top: 10px;">deep clean for new occupants</p>
                             </div>
@@ -696,7 +706,8 @@
                         <div class="combo-desc">1 Kitchen (Occupied) + 1 Bathroom (Standard)</div>
                         <div class="combo-price">₹ 1,099</div>
                         <span class="combo-type">Save ₹ 149</span>
-                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 749 + ₹ 399 = ₹ 1,248</p>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 749 + ₹ 399 = ₹ 1,248
+                        </p>
                     </div>
 
                     <div class="combo-card">
@@ -704,7 +715,8 @@
                         <div class="combo-desc">1 Kitchen (Move-In) + 1 Bathroom (Move-In)</div>
                         <div class="combo-price">₹ 1,699</div>
                         <span class="combo-type">Save ₹ 269</span>
-                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 1,249 + ₹ 499 = ₹ 1,968</p>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Individual: ₹ 1,249 + ₹ 499 = ₹
+                            1,968</p>
                     </div>
                 </div>
             </div>
@@ -766,7 +778,8 @@
 
                     <div class="info-card">
                         <h4>🧴 Cleaning Supplies</h4>
-                        <p>We bring all professional-grade degreasers, sanitizers, and equipment. Eco-friendly options available.</p>
+                        <p>We bring all professional-grade degreasers, sanitizers, and equipment. Eco-friendly options
+                            available.</p>
                     </div>
 
                     <div class="info-card">
@@ -796,40 +809,60 @@
                 <h2 class="section-title">Related Services</h2>
                 <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                     <div class="service-card">
-                        <div class="service-header" style="background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);">🚿 Bathroom Cleaning</div>
+                        <div class="service-header"
+                            style="background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);">🚿 Bathroom Cleaning
+                        </div>
                         <div class="service-content">
                             <table class="price-table">
                                 <tr>
                                     <th>Type</th>
                                     <th>Price</th>
                                 </tr>
-                                <tr><td>Standard</td><td class="price-tag">₹ 399</td></tr>
-                                <tr><td>Move-In</td><td class="price-tag">₹ 499</td></tr>
+                                <tr>
+                                    <td>Standard</td>
+                                    <td class="price-tag">₹ 399</td>
+                                </tr>
+                                <tr>
+                                    <td>Move-In</td>
+                                    <td class="price-tag">₹ 499</td>
+                                </tr>
                             </table>
                         </div>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🏠 Full Home</div>
+                        <div class="service-header"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🏠 Full Home</div>
                         <div class="service-content">
-                            <p style="text-align: center; color: #666; margin-bottom: 15px;">Complete home cleaning packages</p>
+                            <p style="text-align: center; color: #666; margin-bottom: 15px;">Complete home cleaning
+                                packages</p>
                             <div style="text-align: center;">
-                                <span style="font-size: 1.5em; font-weight: 700; color: #764ba2;">₹ 2,849 - ₹ 6,949</span>
-                                <p style="font-size: 0.9em; color: #999; margin-top: 5px;">Based on property size & type</p>
+                                <span style="font-size: 1.5em; font-weight: 700; color: #764ba2;">₹ 2,849 - ₹
+                                    6,949</span>
+                                <p style="font-size: 0.9em; color: #999; margin-top: 5px;">Based on property size & type
+                                </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🛋️ Sofa Cleaning</div>
+                        <div class="service-header"
+                            style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🛋️ Sofa Cleaning
+                        </div>
                         <div class="service-content">
                             <table class="price-table">
                                 <tr>
                                     <th>Seats</th>
                                     <th>Price</th>
                                 </tr>
-                                <tr><td>3-4 Seater</td><td class="price-tag">₹ 399</td></tr>
-                                <tr><td>5-6 Seater</td><td class="price-tag">₹ 549</td></tr>
+                                <tr>
+                                    <td>3-4 Seater</td>
+                                    <td class="price-tag">₹ 399</td>
+                                </tr>
+                                <tr>
+                                    <td>5-6 Seater</td>
+                                    <td class="price-tag">₹ 549</td>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -926,4 +959,5 @@
         }
     </script>
 </body>
+
 </html>

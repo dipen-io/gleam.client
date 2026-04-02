@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f0f0f1 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -23,7 +24,7 @@
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }
 
@@ -50,7 +51,7 @@
             font-size: 3em;
             margin-bottom: 10px;
             position: relative;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .header p {
@@ -69,7 +70,7 @@
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .calculator-title {
@@ -91,13 +92,13 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .input-group:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .input-group label {
@@ -134,7 +135,7 @@
             border-radius: 15px;
             text-align: center;
             margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transform: scale(1);
             transition: transform 0.3s;
         }
@@ -154,7 +155,7 @@
         .price-amount {
             font-size: 4em;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             margin: 10px 0;
         }
 
@@ -200,14 +201,14 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e0e0e0;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .service-header {
@@ -275,7 +276,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s;
         }
 
@@ -320,7 +321,7 @@
             padding: 25px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -387,18 +388,22 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .service-card, .addon-item, .combo-card {
+        .service-card,
+        .addon-item,
+        .combo-card {
             animation: fadeIn 0.6s ease-out;
         }
     </style>
-<base target="_blank">
+    <base target="_blank">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -461,7 +466,7 @@
                 <h2 class="section-title">Full Home Cleaning Packages</h2>
                 <div class="services-grid">
                     <!-- Furnished Classic -->
-                    <!-- <div class="service-card">
+            <!-- <div class="service-card">
                         <div class="service-header">Furnished - Classic</div>
                         <div class="service-content">
                             <table class="price-table">
@@ -478,8 +483,8 @@
                         </div>
                     </div> -->
 
-                    <!-- Unfurnished Classic -->
-                    <!-- <div class="service-card">
+            <!-- Unfurnished Classic -->
+            <!-- <div class="service-card">
                         <div class="service-header">Unfurnished - Classic</div>
                         <div class="service-content">
                             <table class="price-table">
@@ -496,8 +501,8 @@
                         </div>
                     </div> -->
 
-                    <!-- Furnished Premium -->
-                    <!-- <div class="service-card">
+            <!-- Furnished Premium -->
+            <!-- <div class="service-card">
                         <div class="service-header">Furnished - Premium</div>
                         <div class="service-content">
                             <table class="price-table">
@@ -514,8 +519,8 @@
                         </div>
                     </div> -->
 
-                    <!-- Unfurnished Premium -->
-                    <!-- <div class="service-card">
+            <!-- Unfurnished Premium -->
+            <!-- <div class="service-card">
                         <div class="service-header">Unfurnished - Premium</div>
                         <div class="service-content">
                             <table class="price-table">
@@ -532,8 +537,8 @@
                         </div>
                     </div> -->
 
-                    <!-- Furnished Platinum -->
-                    <!-- <div class="service-card">
+            <!-- Furnished Platinum -->
+            <!-- <div class="service-card">
                         <div class="service-header">Furnished - Platinum</div>
                         <div class="service-content">
                             <table class="price-table">
@@ -549,193 +554,214 @@
                             </table>
                         </div>
                     </div> -->
+        </div>
+    </div>
+
+    <!-- Specialized Services -->
+    <div class="services-section">
+        <h2 class="section-title">Specialized Cleaning Services</h2>
+        <div class="services-grid">
+            <!-- Sofa Cleaning -->
+            <div class="service-card">
+                <div class="service-header">🛋️ Sofa Cleaning</div>
+                <div class="service-content">
+                    <p style="margin-bottom: 15px; color: #666;">Dry Vacuum / Wet Shampooing</p>
+                    <table class="price-table">
+                        <tr>
+                            <th>Seats</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>3-4 Seater</td>
+                            <td class="price-tag">₹ 399</td>
+                        </tr>
+                        <tr>
+                            <td>5-6 Seater</td>
+                            <td class="price-tag">₹ 549</td>
+                        </tr>
+                        <tr>
+                            <td>7+ Seater</td>
+                            <td class="price-tag">₹ 699</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
-            <!-- Specialized Services -->
-            <div class="services-section">
-                <h2 class="section-title">Specialized Cleaning Services</h2>
-                <div class="services-grid">
-                    <!-- Sofa Cleaning -->
-                    <div class="service-card">
-                        <div class="service-header">🛋️ Sofa Cleaning</div>
-                        <div class="service-content">
-                            <p style="margin-bottom: 15px; color: #666;">Dry Vacuum / Wet Shampooing</p>
-                            <table class="price-table">
-                                <tr>
-                                    <th>Seats</th>
-                                    <th>Price</th>
-                                </tr>
-                                <tr><td>3-4 Seater</td><td class="price-tag">₹ 399</td></tr>
-                                <tr><td>5-6 Seater</td><td class="price-tag">₹ 549</td></tr>
-                                <tr><td>7+ Seater</td><td class="price-tag">₹ 699</td></tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Mattress Cleaning -->
-                    <div class="service-card">
-                        <div class="service-header">🛏️ Mattress Cleaning</div>
-                        <div class="service-content">
-                            <p style="margin-bottom: 15px; color: #666;">Per Bed</p>
-                            <div style="text-align: center; padding: 30px;">
-                                <div style="font-size: 3em; font-weight: 700; color: #2a5298;">₹ 379</div>
-                                <p style="color: #666; margin-top: 10px;">per bed</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kitchen Cleaning -->
-                    <div class="service-card">
-                        <div class="service-header">🍳 Kitchen Cleaning</div>
-                        <div class="service-content">
-                            <table class="price-table">
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Price</th>
-                                </tr>
-                                <tr><td>Occupied</td><td class="price-tag">₹ 1,099</td></tr>
-                                <tr><td>Unoccupied</td><td class="price-tag">₹ 849</td></tr>
-                                <!-- <tr><td>Move-In</td><td class="price-tag">₹ 1,249</td></tr> -->
-                                <!-- <tr><td colspan="2" style="background: #f0f0f0; font-weight: bold;">Deep Cleaning</td></tr> -->
-                                <!-- <tr><td>Standard</td><td class="price-tag">₹ 1,099</td></tr> -->
-                                <!-- <tr><td>Move-In</td><td class="price-tag">₹ 1,399</td></tr> -->
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Bathroom Cleaning -->
-                    <div class="service-card">
-                        <div class="service-header">🚿 Bathroom Cleaning</div>
-                        <div class="service-content">
-                            <table class="price-table">
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Price</th>
-                                </tr>
-                                <tr><td>Standard</td><td class="price-tag">₹ 399</td></tr>
-                                <tr><td>Premium</td><td class="price-tag">₹ 499</td></tr>
-                            </table>
-                        </div>
+            <!-- Mattress Cleaning -->
+            <div class="service-card">
+                <div class="service-header">🛏️ Mattress Cleaning</div>
+                <div class="service-content">
+                    <p style="margin-bottom: 15px; color: #666;">Per Bed</p>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="font-size: 3em; font-weight: 700; color: #2a5298;">₹ 379</div>
+                        <p style="color: #666; margin-top: 10px;">per bed</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Add-ons -->
-            <div class="addons-section">
-                <h2 class="section-title" style="margin-bottom: 10px;">Extra Services & Add-ons</h2>
-                <div class="addons-grid">
-                    <div class="addon-item">
-                        <div>
-                            <div class="addon-name">Balcony Cleaning</div>
-                        </div>
-                        <div class="addon-price">₹ 349</div>
-                    </div>
-
-                    <div class="addon-item">
-                        <div>
-                            <div class="addon-name">Store/Utility Cleaning</div>
-                        </div>
-                        <div class="addon-price">₹ 299</div>
-                    </div>
-
-                    <div class="addon-item">
-                        <div>
-                            <div class="addon-name">Extra Bathroom</div>
-                        </div>
-                        <div class="addon-price">₹ 399</div>
-                    </div>
-
-                    <!-- <div class="addon-item"> -->
-                    <!--     <div> -->
-                    <!--         <div class="addon-name">Window Cleaning</div> -->
-                    <!--     </div> -->
-                    <!--     <div class="addon-price">₹ 199</div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="addon-item"> -->
-                    <!--     <div> -->
-                    <!--         <div class="addon-name">Door Cleaning</div> -->
-                    <!--     </div> -->
-                    <!--     <div class="addon-price">₹ 49</div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="addon-item"> -->
-                    <!--     <div> -->
-                    <!--         <div class="addon-name">Fan Cleaning</div> -->
-                    <!--     </div> -->
-                    <!--     <div class="addon-price">₹ 35</div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="addon-item"> -->
-                    <!--     <div> -->
-                    <!--         <div class="addon-name">Exhaust Fan Cleaning</div> -->
-                    <!--     </div> -->
-                    <!--     <div class="addon-price">₹ 69</div> -->
-                    <!-- </div> -->
+            <!-- Kitchen Cleaning -->
+            <div class="service-card">
+                <div class="service-header">🍳 Kitchen Cleaning</div>
+                <div class="service-content">
+                    <table class="price-table">
+                        <tr>
+                            <th>Type</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Occupied</td>
+                            <td class="price-tag">₹ 1,099</td>
+                        </tr>
+                        <tr>
+                            <td>Unoccupied</td>
+                            <td class="price-tag">₹ 849</td>
+                        </tr>
+                        <!-- <tr><td>Move-In</td><td class="price-tag">₹ 1,249</td></tr> -->
+                        <!-- <tr><td colspan="2" style="background: #f0f0f0; font-weight: bold;">Deep Cleaning</td></tr> -->
+                        <!-- <tr><td>Standard</td><td class="price-tag">₹ 1,099</td></tr> -->
+                        <!-- <tr><td>Move-In</td><td class="price-tag">₹ 1,399</td></tr> -->
+                    </table>
                 </div>
             </div>
 
-            <!-- Appliances -->
-            <!-- <div class="services-section"> -->
-            <!--     <h2 class="section-title">Appliance Cleaning</h2> -->
-            <!--     <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));"> -->
-            <!--         <div class="service-card"> -->
-            <!--             <div class="service-header">❄️ Refrigerator</div> -->
-            <!--             <div class="service-content"> -->
-            <!--                 <table class="price-table"> -->
-            <!--                     <tr> -->
-            <!--                         <th>Type</th> -->
-            <!--                         <th>Price</th> -->
-            <!--                     </tr> -->
-            <!--                     <tr><td>Single/Double Door</td><td class="price-tag">₹ 249</td></tr> -->
-            <!--                     <tr><td>All Types</td><td class="price-tag">₹ 349</td></tr> -->
-            <!--                 </table> -->
-            <!--             </div> -->
-            <!--         </div> -->
-            <!---->
-            <!--         <div class="service-card"> -->
-            <!--             <div class="service-header">🔥 Chimney Cleaning</div> -->
-            <!--             <div class="service-content"> -->
-            <!--                 <div style="text-align: center; padding: 20px;"> -->
-            <!--                     <div style="font-size: 2.5em; font-weight: 700; color: #2a5298;">₹ 299</div> -->
-            <!--                     <p style="color: #666; margin-top: 10px;">For All Types</p> -->
-            <!--                 </div> -->
-            <!--             </div> -->
-            <!--         </div> -->
-            <!---->
-            <!--         <div class="service-card"> -->
-            <!--             <div class="service-header">📟 Microwave Cleaning</div> -->
-            <!--             <div class="service-content"> -->
-            <!--                 <div style="text-align: center; padding: 20px;"> -->
-            <!--                     <div style="font-size: 2.5em; font-weight: 700; color: #2a5298;">₹ 149</div> -->
-            <!--                     <p style="color: #666; margin-top: 10px;">Standard Service</p> -->
-            <!--                 </div> -->
-            <!--             </div> -->
-            <!--         </div> -->
+            <!-- Bathroom Cleaning -->
+            <div class="service-card">
+                <div class="service-header">🚿 Bathroom Cleaning</div>
+                <div class="service-content">
+                    <table class="price-table">
+                        <tr>
+                            <th>Type</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Standard</td>
+                            <td class="price-tag">₹ 399</td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td class="price-tag">₹ 499</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add-ons -->
+    <div class="addons-section">
+        <h2 class="section-title" style="margin-bottom: 10px;">Extra Services & Add-ons</h2>
+        <div class="addons-grid">
+            <div class="addon-item">
+                <div>
+                    <div class="addon-name">Balcony Cleaning</div>
+                </div>
+                <div class="addon-price">₹ 349</div>
+            </div>
+
+            <div class="addon-item">
+                <div>
+                    <div class="addon-name">Store/Utility Cleaning</div>
+                </div>
+                <div class="addon-price">₹ 299</div>
+            </div>
+
+            <div class="addon-item">
+                <div>
+                    <div class="addon-name">Extra Bathroom</div>
+                </div>
+                <div class="addon-price">₹ 399</div>
+            </div>
+
+            <!-- <div class="addon-item"> -->
+            <!--     <div> -->
+            <!--         <div class="addon-name">Window Cleaning</div> -->
             <!--     </div> -->
+            <!--     <div class="addon-price">₹ 199</div> -->
             <!-- </div> -->
 
-            <!-- Combo Deals -->
-            <!-- <div class="combo-section"> -->
-            <!--     <h2 class="section-title" style="margin-bottom: 10px;">💎 Special Combo Deals</h2> -->
-            <!--     <div class="combo-grid"> -->
-            <!--         <div class="combo-card"> -->
-            <!--             <div class="combo-title">Combo 1+1</div> -->
-            <!--             <div class="combo-desc">Bathroom + Kitchen Standard Cleaning</div> -->
-            <!--             <div class="combo-price">₹ 1,099</div> -->
-            <!--             <span class="combo-type">Standard</span> -->
-            <!--         </div> -->
-            <!---->
-            <!--         <div class="combo-card"> -->
-            <!--             <div class="combo-title">Combo 1+2</div> -->
-            <!--             <div class="combo-desc">Bathroom + Kitchen Move-In Cleaning</div> -->
-            <!--             <div class="combo-price">₹ 1,699</div> -->
-            <!--             <span class="combo-type">Move-In</span> -->
-            <!--         </div> -->
+            <!-- <div class="addon-item"> -->
+            <!--     <div> -->
+            <!--         <div class="addon-name">Door Cleaning</div> -->
             <!--     </div> -->
+            <!--     <div class="addon-price">₹ 49</div> -->
+            <!-- </div> -->
+
+            <!-- <div class="addon-item"> -->
+            <!--     <div> -->
+            <!--         <div class="addon-name">Fan Cleaning</div> -->
+            <!--     </div> -->
+            <!--     <div class="addon-price">₹ 35</div> -->
+            <!-- </div> -->
+
+            <!-- <div class="addon-item"> -->
+            <!--     <div> -->
+            <!--         <div class="addon-name">Exhaust Fan Cleaning</div> -->
+            <!--     </div> -->
+            <!--     <div class="addon-price">₹ 69</div> -->
             <!-- </div> -->
         </div>
+    </div>
+
+    <!-- Appliances -->
+    <!-- <div class="services-section"> -->
+    <!--     <h2 class="section-title">Appliance Cleaning</h2> -->
+    <!--     <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));"> -->
+    <!--         <div class="service-card"> -->
+    <!--             <div class="service-header">❄️ Refrigerator</div> -->
+    <!--             <div class="service-content"> -->
+    <!--                 <table class="price-table"> -->
+    <!--                     <tr> -->
+    <!--                         <th>Type</th> -->
+    <!--                         <th>Price</th> -->
+    <!--                     </tr> -->
+    <!--                     <tr><td>Single/Double Door</td><td class="price-tag">₹ 249</td></tr> -->
+    <!--                     <tr><td>All Types</td><td class="price-tag">₹ 349</td></tr> -->
+    <!--                 </table> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <div class="service-card"> -->
+    <!--             <div class="service-header">🔥 Chimney Cleaning</div> -->
+    <!--             <div class="service-content"> -->
+    <!--                 <div style="text-align: center; padding: 20px;"> -->
+    <!--                     <div style="font-size: 2.5em; font-weight: 700; color: #2a5298;">₹ 299</div> -->
+    <!--                     <p style="color: #666; margin-top: 10px;">For All Types</p> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <div class="service-card"> -->
+    <!--             <div class="service-header">📟 Microwave Cleaning</div> -->
+    <!--             <div class="service-content"> -->
+    <!--                 <div style="text-align: center; padding: 20px;"> -->
+    <!--                     <div style="font-size: 2.5em; font-weight: 700; color: #2a5298;">₹ 149</div> -->
+    <!--                     <p style="color: #666; margin-top: 10px;">Standard Service</p> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </div> -->
+
+    <!-- Combo Deals -->
+    <!-- <div class="combo-section"> -->
+    <!--     <h2 class="section-title" style="margin-bottom: 10px;">💎 Special Combo Deals</h2> -->
+    <!--     <div class="combo-grid"> -->
+    <!--         <div class="combo-card"> -->
+    <!--             <div class="combo-title">Combo 1+1</div> -->
+    <!--             <div class="combo-desc">Bathroom + Kitchen Standard Cleaning</div> -->
+    <!--             <div class="combo-price">₹ 1,099</div> -->
+    <!--             <span class="combo-type">Standard</span> -->
+    <!--         </div> -->
+    <!---->
+    <!--         <div class="combo-card"> -->
+    <!--             <div class="combo-title">Combo 1+2</div> -->
+    <!--             <div class="combo-desc">Bathroom + Kitchen Move-In Cleaning</div> -->
+    <!--             <div class="combo-price">₹ 1,699</div> -->
+    <!--             <span class="combo-type">Move-In</span> -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </div> -->
+    </div>
     </div>
 
     <script>
@@ -824,4 +850,5 @@
         }
     </script>
 </body>
+
 </html>
