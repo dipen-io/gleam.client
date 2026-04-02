@@ -1,64 +1,3 @@
-/* --- Global Reset & Variables --- */
-:root {
-    --primary-color: #00b4d8;
-    /* Clean sky blue */
-    --secondary-color: #0077b6;
-    --text-dark: #2d3436;
-    --text-light: #636e72;
-    --bg-light: #f9fbfd;
-    --white: #ffffff;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--white);
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-a {
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-ul {
-    list-style: none;
-}
-
-/* --- Top Bar & Header --- */
-.top-bar {
-    background: var(--bg-light);
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-}
-
-.top-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact-info a {
-    color: var(--text-light);
-    margin-right: 20px;
-}
-
 .btn {
     padding: 10px 20px;
     border-radius: 50px;
@@ -77,20 +16,6 @@ ul {
     margin-right: 10px;
 }
 
-.site-header {
-    padding: 20px 0;
-    background: white;
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .logo h1 {
     font-size: 1.8rem;
@@ -102,10 +27,6 @@ ul {
     color: var(--primary-color);
 }
 
-.main-nav ul {
-    display: flex;
-    gap: 30px;
-}
 
 .main-nav a {
     color: var(--text-dark);
